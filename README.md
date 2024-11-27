@@ -3,5 +3,6 @@ Created this repo because I was tired of losing those compose files and having t
 ## Recommendations: 
 * Is not advisable to use plex as remote git stack in portainer because the claim authentication is not gonna work.
 * Remember to change the paths to your user instead of mine or any path you want. Just remeber that if not in home user folder you have to deal with permissions in linux, this is the easier way (not safer).
+* Clone this repo and do your thing
 ![example](https://github.com/rodhfr/portainer-stacks/blob/main/assets/Control-V.png)
 
