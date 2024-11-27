@@ -1,10 +1,10 @@
 services:
     microbin:
-        container_name: microbin-testing
+        container_name: microbin
         image: danielszabo99/microbin
         ports:
-            - '6969:8080'
+            - '5980:8080'
         volumes:
-            - '/home/rodhfr/Docker/testing/microbin:/app/pasta_data'
+            - '/home/rodhfr/Docker/microbin/:/app/pasta_data'
         command: --editable --highlightsyntax --private --wide
         restart: unless-stopped
