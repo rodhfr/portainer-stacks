@@ -6,3 +6,29 @@ Created this repo because I was tired of losing those compose files and having t
 * Clone this repo and do your thing
 ![example](https://github.com/rodhfr/portainer-stacks/blob/main/assets/Control-V.png)
 
+### STEPS
+On a fresh machine install docker
+archlinux docker installation
+```bash
+yay -Syu docker```
+[post install steps docker](https://docs.docker.com/engine/install/linux-postinstall/)
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker run --rm hello-world
+```
+Start and enable docker via systemctl or others init systems 
+```bash
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service```
+To stop docker from start at startup
+```bash
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+```
+Install portainer
+```bash
+docker volume create portainer_data
+docker run -d -p "127.0.0.1:8000:8000" -p "127.0.0.1:9443:9443" --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.4
+```
