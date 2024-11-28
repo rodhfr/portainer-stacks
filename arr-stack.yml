@@ -8,8 +8,8 @@ services:
       - TZ=America/Recife
     volumes:
       - /home/rodhfr/Docker/bazarr/config/:/config
-      - /home/rodhfr/Plex/movies:/movies #optional
-      - /home/rodhfr/Plex/tv:/tv #optional
+      - /media/movies:/movies #optional
+      - /media/tv:/tv #optional
     ports:
       - "127.0.0.1:6767:6767"
     restart: unless-stopped
@@ -23,8 +23,8 @@ services:
       - TZ=America/Recife
     volumes:
       - /home/rodhfr/Docker/radarr/config/:/config
-      - /home/rodhfr/Plex/movies:/movies #optional
-      - /home/rodhfr/Downloads/Torrent/:/downloads #optional
+      - /media/movies:/movies #optional
+      - /media/tv:/tv #optional
     ports:
       - "127.0.0.1:7878:7878"
     restart: unless-stopped
@@ -104,7 +104,7 @@ services:
       - TZ=America/Recife
     volumes:
       - /home/rodhfr/Docker/sonarr/config/:/config
-      - /home/rodhfr/Plex/tv:/tv #optional
+      - /media/tv:/tv #optional
       - /home/rodhfr/Downloads/Torrent/:/downloads #optional
     ports:
       - "127.0.0.1:8989:8989"
