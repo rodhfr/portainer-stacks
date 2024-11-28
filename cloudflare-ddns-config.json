@@ -1,0 +1,32 @@
+{
+  "cloudflare": [
+    {
+      "authentication": {
+        "api_token": "REDACTEDTOKENTSONPASSWORDMANAGER",
+        "api_key": {
+          "api_key": "api_key_here",
+          "account_email": "your_email_here"
+        }
+      },
+      "zone_id": "REDACTEDITSONPASSWORDMANAGER",
+      "subdomains": [
+        {
+          "name": "plex",
+          "proxied": true 
+        },
+        {
+          "name": "microbin",
+          "proxied": true
+        },
+        {
+          "name": "jellyfin",
+          "proxied": true
+        }
+      ]
+    }
+  ],
+  "a": false,
+  "aaaa": true,
+  "purgeUnknownRecords": false,
+  "ttl": 300
+}

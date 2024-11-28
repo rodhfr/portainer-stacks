@@ -8,3 +8,12 @@ services:
             - '/home/rodhfr/Docker/microbin/:/app/pasta_data'
         command: --editable --highlightsyntax --private --wide
         restart: unless-stopped
+
+    memos:
+      image: neosmemo/memos:stable
+      container_name: memos
+      ports:
+        - "127.0.0.1:5230:5230"
+      volumes:
+        - /home/rodhfr/Docker/memos/:/var/opt/memos
+      restart: unless-stopped
