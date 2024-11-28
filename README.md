@@ -13,7 +13,7 @@ Created this repo because I was tired of losing those compose files and having t
 ```bash
 yay -Syu docker
 ```
-[post install steps docker](https://docs.docker.com/engine/install/linux-postinstall/)
+[Post install steps docker](https://docs.docker.com/engine/install/linux-postinstall/)
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
