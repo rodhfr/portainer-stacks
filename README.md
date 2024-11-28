@@ -57,4 +57,4 @@ docker run -d -p "127.0.0.1:8000:8000" -p "127.0.0.1:9443:9443" --name portainer
 ```
 4) Create portainer login
 5) Load stacks from portainer
-6) Optional: configure nginx-proxy-manager and ddny stack.
+6) Optional: configure nginx-proxy-manager and ddns cloudflare stack.
