@@ -11,7 +11,8 @@ Created this repo because I was tired of losing those compose files and having t
 > [!NOTE] 
 > This is archlinux docker installation look up for your distro, albeit they are similar.
 ```bash
-yay -Syu docker```
+yay -Syu docker
+```
 [post install steps docker](https://docs.docker.com/engine/install/linux-postinstall/)
 ```bash
 sudo groupadd docker
