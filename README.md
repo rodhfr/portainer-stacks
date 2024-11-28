@@ -64,3 +64,6 @@ sudo mkdir /media
 sudo chown -R $USER:$USER /media
 sudo chmod -R 755 /media
 ```
+
+## Known issues and bugs
+* Plex docker container is not working with ipv6. Log investigation needed. Current workaround: install plex-media-server version from aur and check [wiki](https://wiki.archlinux.org/title/Plex) how to install properly on baremetal.

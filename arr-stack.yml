@@ -25,6 +25,7 @@ services:
       - /home/rodhfr/Docker/radarr/config/:/config
       - /media/movies:/movies #optional
       - /media/tv:/tv #optional
+      - /media/downloads/:/downloads
     ports:
       - "127.0.0.1:7878:7878"
     restart: unless-stopped
@@ -53,7 +54,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - /home/rodhfr/Docker/qbittorrent/config/:/config
-      - /home/rodhfr/Downloads/Torrent/:/downloads #optional
+      - /media/downloads/:/downloads
     ports:
       - "127.0.0.1:8079:8079"
       - "127.0.0.1:6881:6881"
@@ -70,7 +71,7 @@ services:
       - RUN_OPTS= #optional
     volumes:
       - /home/rodhfr/Docker/jackett/config/:/config
-      - /home/rodhfr/Docker/jackett/blackhole:/downloads
+      - /media/downloads/jackett-blackhole/:/downloads
     ports:
       - "127.0.0.1:9117:9117"
     restart: unless-stopped
@@ -104,8 +105,8 @@ services:
       - TZ=America/Recife
     volumes:
       - /home/rodhfr/Docker/sonarr/config/:/config
-      - /media/tv:/tv #optional
-      - /home/rodhfr/Downloads/Torrent/:/downloads #optional
+      - /media/tv:/tv 
+      - /media/downloads/:/downloads
     ports:
       - "127.0.0.1:8989:8989"
     restart: unless-stopped
