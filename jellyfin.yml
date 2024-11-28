@@ -1,0 +1,22 @@
+---
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Recife
+      - JELLYFIN_PublishedServerUrl=http://rodhfr.shop #optional
+    volumes:
+      - /home/rodhfr/Docker/jellyfin/:/config
+      - /home/rodhfr/Plex/:/data/
+    ports:
+      - "127.0.0.1:8096:8096"
+      - "127.0.0.1:8920:8920" #optional
+      - "127.0.0.1:7359:7359/udp" #optional
+      - "127.0.0.1:1900:1900/udp" #optional
+    restart: unless-stopped
+    devices:
+      - /dev/dri:/dev/dri
+
