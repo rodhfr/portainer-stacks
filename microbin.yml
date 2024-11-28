@@ -3,7 +3,7 @@ services:
         container_name: microbin
         image: danielszabo99/microbin
         ports:
-          - '5980:8080'
+          - '127.0.0.1:5980:8080'
         volumes:
             - '/home/rodhfr/Docker/microbin/:/app/pasta_data'
         command: --editable --highlightsyntax --private --wide
