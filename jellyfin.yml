@@ -12,7 +12,7 @@ services:
       - /home/rodhfr/Docker/jellyfin/:/config
       - /media/:/data/
       - /home/rodhfr/Docker/fin-ytdlp-bin/yt-dlp_linux:/usr/bin/yt-dlp
-      - /home/rodhfr/Docker/fin-ytdlp-bin/id3v2:/id3v2
+      - /home/rodhfr/Downloads/id3v2-install:/id3v2-install/
     ports:
       - "127.0.0.1:8096:8096"
       - "127.0.0.1:8920:8920" #optional
