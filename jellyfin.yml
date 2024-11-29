@@ -13,6 +13,7 @@ services:
       - /media/:/data/
       - /usr/bin/yt-dlp:/usr/bin/yt-dlp
       - /usr/bin/id3v2:/usr/bin/id3v2
+      - /home/rodhfr/Downloads/yt-dlp_linux:/yt-dlp
     ports:
       - "127.0.0.1:8096:8096"
       - "127.0.0.1:8920:8920" #optional
