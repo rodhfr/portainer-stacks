@@ -55,6 +55,7 @@ services:
     volumes:
       - /home/rodhfr/Docker/qbittorrent/config/:/config
       - /media/downloads/:/downloads
+      - /media/tv/:/tv
     ports:
       - "127.0.0.1:8079:8079"
       - "127.0.0.1:6881:6881"
