@@ -1,0 +1,9 @@
+services:
+  miniserve:
+    image: docker.io/svenstaro/miniserve
+    ports:
+      - "127.0.0.1:9898:8080"
+    volumes:
+      - /home/rodhfr/Miniserve:/tmp
+    command: /tmp    # Serve the /tmp directory
+

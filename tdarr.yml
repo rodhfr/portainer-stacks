@@ -1,4 +1,3 @@
-version: "3.4"
 services:
   tdarr:
     container_name: tdarr
@@ -26,6 +25,7 @@ services:
       - /home/rodhfr/Docker/tdarr/logs/:/app/logs
       - /media/movies:/media/movies
       - /media/tv:/media/tv
+      - /media/youtube/:/media/youtube
       - /home/rodhfr/tdarr/transcode_cache:/temp
     devices:
       - /dev/dri:/dev/dri

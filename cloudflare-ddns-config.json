@@ -2,24 +2,32 @@
   "cloudflare": [
     {
       "authentication": {
-        "api_token": "REDACTEDTOKENTSONPASSWORDMANAGER",
+        "api_token": "vZWD5or6bBRQdGWQQCB4VMz-xOmLK85tQm0ryHuF",
         "api_key": {
           "api_key": "api_key_here",
           "account_email": "your_email_here"
         }
       },
-      "zone_id": "REDACTEDITSONPASSWORDMANAGER",
+      "zone_id": "550e1bda3e8b7189a85b1049f3d44f1c",
       "subdomains": [
         {
           "name": "plex",
-          "proxied": true 
+          "proxied": false
         },
         {
           "name": "microbin",
-          "proxied": true
+          "proxied": false
         },
         {
           "name": "jellyfin",
+          "proxied": false
+        },
+        {
+          "name": "memos",
+          "proxied": false
+        },
+        {
+          "name": "yt",
           "proxied": true
         }
       ]
@@ -28,5 +36,5 @@
   "a": false,
   "aaaa": true,
   "purgeUnknownRecords": false,
-  "ttl": 300
+  "ttl": 60
 }
