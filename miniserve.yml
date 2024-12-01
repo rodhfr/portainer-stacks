@@ -7,4 +7,5 @@ services:
       - /home/rodhfr/Miniserve:/tmp
       #command: /tmp    # Serve the /tmp directory
     command: -q -z -S date --title Miniserve /tmp
+    restart: unless-stopped
 
