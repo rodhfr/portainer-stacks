@@ -1,0 +1,8 @@
+sudo cp ./rclone-ctbserver.service /etc/systemd/system/rclone-ctbserver.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable rclone-ctbserver.service
+sudo systemctl start rclone-ctbserver.service
+sudo systemctl status rclone-ctbserver.service
+
+

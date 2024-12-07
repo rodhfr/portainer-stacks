@@ -23,9 +23,9 @@ services:
       - /home/rodhfr/Docker/tdarr/server:/app/server
       - /home/rodhfr/Docker/tdarr/configs/:/app/configs
       - /home/rodhfr/Docker/tdarr/logs/:/app/logs
-      - /media/movies:/media/movies
-      - /media/tv:/media/tv
-      - /media/youtube/:/media/youtube
+      - /sshmedia/movies:/media/movies
+      - /sshmedia/tv/:/media/tv
+      - /sshmedia/youtube/:/media/youtube
       - /home/rodhfr/tdarr/transcode_cache:/temp
     devices:
       - /dev/dri:/dev/dri
