@@ -3,21 +3,23 @@ services:
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
+    network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Recife
-      - JELLYFIN_PublishedServerUrl=http://rodhfr.shop #optional
+      - JELLYFIN_PublishedServerUrl=http://jellyfin.rodhfr.shop #optional
     volumes:
       - /home/rodhfr/Docker/jellyfin/:/config
       - /media/:/data/
-      - /home/rodhfr/Docker/fin-ytdlp-bin/yt-dlp_linux:/usr/bin/yt-dlp
+     # - /home/rodhfr/Docker/fin-ytdlp-bin/yt-dlp_linux:/usr/bin/yt-dlp
     ports:
       - "8096:8096"
-      - "127.0.0.1:8920:8920" #optional
-      - "127.0.0.1:7359:7359/udp" #optional
-      - "127.0.0.1:1900:1900/udp" #optional
+      - "8920:8920" #optional
+      - "7359:7359/udp" #optional
+      - "1900:1900/udp" #optional
     restart: unless-stopped
     devices:
       - /dev/dri:/dev/dri
+
 

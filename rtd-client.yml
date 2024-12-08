@@ -1,0 +1,23 @@
+---
+version: '3.3'
+services:
+  rdtclient:
+    image: rogerfar/rdtclient
+    container_name: rdtclient
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /home/rodhfr/Docker/rdt-client/:/data/db
+      - /media/downloads/:/downloads
+      - /media/downloads/radarr:/downloads/radarr
+      - /media/downloads/sonarr:/downloads/sonarr
+    logging:
+       driver: json-file
+       options:
+          max-size: 10m
+    ports:
+      - '127.0.0.1:6500:6500'
+    restart: unless-stopped
